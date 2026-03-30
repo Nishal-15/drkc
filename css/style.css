@@ -149,17 +149,34 @@ h1, h2, h3, h4, .apple-heading {
 
 /* Cards */
 .apple-card {
-    background: var(--bg-white);
-    border-radius: var(--border-radius-lg);
-    padding: 60px 48px;
-    border: 1px solid rgba(0,0,0,0.04);
+    background: #ffffff;
+    border-radius: var(--border-radius-xl);
+    padding: 60px 45px;
+    border: 1px solid rgba(0, 0, 0, 0.12); /* High visibility border */
+    border-top: 6px solid var(--primary-blue); /* Bolder blue highlighter */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08); /* Persistent shadow */
     transition: var(--transition-smooth);
     height: 100%;
 }
 
-.apple-card:hover { transform: translateY(-12px); box-shadow: 0 40px 80px rgba(0,0,0,0.08); }
+.apple-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 45px 90px rgba(0, 113, 227, 0.15); /* Premium blue-tinted hover shadow */
+    border-color: rgba(0, 113, 227, 0.4);
+}
 
-.transformation-arrow { font-size: 2rem; color: var(--primary-blue); margin: 20px 0; display: block; }
+.bg-blue .apple-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-top: 4px solid #ffffff; /* White highlighter for blue sections */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.bg-blue .apple-card:hover {
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+}
 
 /* Dark Sections */
 .bg-dark { background-color: var(--bg-dark-surface); color: white; }
