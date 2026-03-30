@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.disabled = true;
 
             // Construct WhatsApp Enquiry
-            const whatsappNumber = "916374316870";
+            const whatsappNumber = "916300405352";
             const text = `*New Transformation Enquiry*%0A%0A*Name:* ${name}%0A*Email:* ${email}%0A*Enquiry:* ${message}`;
             const waLink = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${text}`;
 
