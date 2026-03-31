@@ -36,7 +36,7 @@ h1, h2, h3, h4, .apple-heading {
 }
 
 /* Utils */
-.section-padding { padding: clamp(100px, 12vw, 200px) 0; }
+.section-padding { padding: clamp(40px, 8vw, 100px) 0; }
 .apple-container { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
 .fw-600 { font-weight: 600; }
 .text-gradient {
@@ -44,6 +44,7 @@ h1, h2, h3, h4, .apple-heading {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    display: inline-block;
 }
 
 /* Navigation */
@@ -53,10 +54,10 @@ h1, h2, h3, h4, .apple-heading {
     -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid rgba(0,0,0,0.05);
     transition: var(--transition-smooth);
-    padding: 20px 0;
+    padding: 12px 0; /* Reduced from 20px */
 }
 
-.navbar-apple.scrolled { padding: 12px 0; }
+.navbar-apple.scrolled { padding: 8px 0; }
 
 .nav-link { font-weight: 500; color: var(--text-dark) !important; font-size: 0.95rem; margin: 0 12px; }
 
@@ -156,7 +157,7 @@ h1, h2, h3, h4, .apple-heading {
     border-top: 6px solid var(--primary-blue); /* Bolder blue highlighter */
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08); /* Persistent shadow */
     transition: var(--transition-smooth);
-    height: 100%;
+    margin-bottom: 24px;
 }
 
 .apple-card:hover {

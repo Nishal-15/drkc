@@ -81,10 +81,19 @@ document.addEventListener('DOMContentLoaded', () => {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
             
-            // Capture Data
-            const name = document.getElementById('formName').value;
-            const email = document.getElementById('formEmail').value;
-            const message = document.getElementById('formMessageText').value;
+            // Capture Data (Unified IDs)
+            const nameField = document.getElementById('name');
+            const emailField = document.getElementById('email');
+            const messageField = document.getElementById('message');
+
+            if (!nameField || !emailField || !messageField) {
+                console.error("Critical Form Error: Inputs not found.");
+                return;
+            }
+
+            const name = nameField.value;
+            const email = emailField.value;
+            const message = messageField.value;
 
             // Premium Visual Feedback (Button State)
             const btn = contactForm.querySelector('button[type="submit"]');
